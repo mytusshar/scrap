@@ -4,6 +4,15 @@ var fs = require('fs');
 var constants = require('./constants.js');
 var utils = require('./utils.js');
 
+exports.hostName = function(host) {
+    if(host) {
+        this.hostname = host;
+        console.log("***hostname is set");
+    } else {
+        return this.hostname;
+    }
+}
+
 exports.isValidURL = function(url) {
     var curURL = _url.parse(url);
     var hostName = curURL.host;
@@ -14,7 +23,8 @@ exports.isValidURL = function(url) {
 }
 
 exports.isValidHostName = function(host) {
-    if(host == constants.HOST_NAME)
+    console.log("hostname: ", utils.hostName());
+    if(host == utils.hostName())
         return true;
     return false;
 }

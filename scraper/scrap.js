@@ -1,5 +1,6 @@
 
 var https = require('https');
+var _url = require('url');
 var http = require('http');
 var Queue = require('./queue');
 var constants = require('./constants.js');
@@ -10,6 +11,9 @@ var queue = new Queue();
 
 var connections = 0;
 var count = 0;
+
+var hostName = _url.parse(constants.TARGET_WEBSITE).host;
+utils.hostName(hostName);
 
 queue.enqueue(constants.TARGET_WEBSITE);
 urlSet.set(constants.TARGET_WEBSITE, false);
