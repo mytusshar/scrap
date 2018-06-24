@@ -11,6 +11,7 @@ This is a simple web-scraper which downloads all URLS from the source website to
 * Clone this repository.
 * Open 'scraper' directory.
 * Run following command:
+    
     `$ node scrap`
 
 ## Changing website URL

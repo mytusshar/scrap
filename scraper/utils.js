@@ -7,7 +7,7 @@ var utils = require('./utils.js');
 exports.hostName = function(host) {
     if(host) {
         this.hostname = host;
-        console.log("***hostname is set");
+        // console.log("***hostname is set");
     } else {
         return this.hostname;
     }
@@ -22,6 +22,7 @@ exports.isValidURL = function(url) {
     return true;
 }
 
+// urls with hostname equal to provided website urls are being scraped
 exports.isValidHostName = function(host) {
     console.log("hostname: ", utils.hostName());
     if(host == utils.hostName())
@@ -29,6 +30,7 @@ exports.isValidHostName = function(host) {
     return false;
 }
 
+// ignoring to scrap urls with invalid extensions
 exports.isInvalidExtension = function(url) {
     var extensions = ['css', 'js', 'svg', 'ico', 'pdf', 'xml', 'mp4', 'm4a', 'png', 'jpg', 'jpeg', 'txt', 'gif'];
     var urlLength = url.length;
@@ -44,6 +46,7 @@ exports.isInvalidExtension = function(url) {
     return false;
 }
 
+//string all urls including other domain urls as well
 exports.writeToFile = function(data) {
     var str = "";
     for(var i=0; i<data.length; i++) {

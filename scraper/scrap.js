@@ -75,8 +75,8 @@ function startFetching(options) {
             });
     
         }).on("error", function(e) {
-            reduceConnAndInit();
             console.log("Got error: " + e.message);
+            reduceConnAndInit();
         });
     } else {
         http.get(options, function(res){
@@ -126,6 +126,7 @@ function addToQueue (urls, urlSet, queue) {
         var urlData = [];
         for(var i=0; i<urls.length; i++) {
             var _url_ = urls[i];
+            //removing end slash to eliminate duplicate urls
             if(_url_.charAt(_url_.length - 1) == '/') {
                 _url_ = _url_.substring(0, _url_.length - 1);
             }
