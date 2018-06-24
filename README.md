@@ -1,30 +1,30 @@
 # Scraper
 
-    # Scraper 
-
-This is a simple web-scraper which downloads all URLS from the source website. It is implemented in NodeJS, without using any external module.
+This is a simple web-scraper which downloads all URLS from the source website to a file. It is implemented in NodeJS, without using any external module.
 
 ## Installation
 
 ### Requirements
 * NodeJS V9
-* NPM
 
-`$ pip install foobar`
+### Running Scraper
+* Clone this repository.
+* Open 'scraper' directory.
+* Run following command:
+    `$ node scrap`
 
 ## Changing website URL
 
 Go to scraper folder, and open `constants.js`.
 
 ```
-    exports.TARGET_WEBSITE = 'https://medium.com'; //'http://www.sarvaha.com'
-
+    //change the website name
+    exports.TARGET_WEBSITE = 'https://medium.com';
+    //change the hostname
     exports.HOST_NAME = 'medium.com';  //'www.sarvaha.com';
-
-    exports.URL_REGEX = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-
-    exports.FILE_NAME = 'output.txt';
-
+    //Maximum parallel connections allowed.
     exports.MAX_CONN = 5;
+    //output file name.
+    exports.FILE_NAME = 'output.txt';
 ```
 
