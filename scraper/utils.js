@@ -24,7 +24,7 @@ exports.isValidURL = function(url) {
 
 // urls with hostname equal to provided website urls are being scraped
 exports.isValidHostName = function(host) {
-    console.log("hostname: ", utils.hostName());
+    // console.log("hostname: ", utils.hostName());
     if(host == utils.hostName())
         return true;
     return false;

@@ -1,4 +1,4 @@
-// Queue class
+
 module.exports = class Queue {
 
     constructor(arr) {

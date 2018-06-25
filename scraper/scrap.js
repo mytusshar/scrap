@@ -20,11 +20,8 @@ urlSet.set(constants.TARGET_WEBSITE, false);
 
 init();
 
-function init() {
-    console.log("\nvisiting: init():count " + count++);
-    
+function init() {    
     if(queue.isEmpty()) {
-        console.log("connections: " + connections);
         console.log("****end of queue");
         return;
     }
@@ -42,7 +39,6 @@ function init() {
         } 
     } else {
         if(queue.isEmpty()) {
-            console.log("connections: " + connections);
             console.log("****end of queue");
             return;
         }
@@ -106,9 +102,6 @@ function startFetching(options) {
 
 function reduceConnAndInit() {
     if(queue.isEmpty()) {
-        // savedToFile = true;
-        // utils.writeToFile(urlSet);
-        console.log("connections: " + connections);
         console.log("****end of queue");
         return;
     }

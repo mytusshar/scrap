@@ -11,6 +11,7 @@ This is a simple web-scraper which downloads all URLS from the source website to
 * Clone this repository.
 * Open 'scraper' directory.
 * Run following command:
+
     
     `$ node scrap`
 
@@ -21,8 +22,6 @@ Go to scraper folder, and open `constants.js`.
 ```
     //change the website name
     exports.TARGET_WEBSITE = 'https://medium.com';
-    //change the hostname
-    exports.HOST_NAME = 'medium.com';  //'www.sarvaha.com';
     //Maximum parallel connections allowed.
     exports.MAX_CONN = 5;
     //output file name.
